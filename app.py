@@ -103,7 +103,7 @@ def makeWebhookResult(data):
 
     #speech = "Click on this link " + google.com
     speech = 'http://stackoverflow.com'
-    print('<a href="{0}">{0}</a>'.format(link))
+    print('<a href="{0}">{0}</a>'.format(speech))
     href="http://stackoverflow.com">http://stackoverflow.com</a>
     print("Response:")
     print(speech)
