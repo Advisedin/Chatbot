@@ -101,10 +101,8 @@ def makeWebhookResult(data):
     #speech = "Will:Today the weather in " + location.get('city') + ": " + condition.get('text') + \
     #         ", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
-    #speech = "Click on this link " + google.com
-    speech = 'http://stackoverflow.com'
-    print('<a href="{0}">{0}</a>'.format(speech))
-    href="http://stackoverflow.com">http://stackoverflow.com</a>
+    speech = 'google.com'
+ 
     print("Response:")
     print(speech)
 
