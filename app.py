@@ -108,7 +108,7 @@ def makeWebhookResult(data):
              ", And the temperature is " + condition.get('temp') + " " + units.get('temperature') 
 
     print("Response:")
-    print(speech)
+    # print(speech)
     print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
     return {
