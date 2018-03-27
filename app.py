@@ -105,10 +105,11 @@ def makeWebhookResult(data):
     sum = float(num1) + float(num2)
 
     speech = "Today the weather in " + location.get('city') + ": " + condition.get('text') + \
-             ", And the temperature is " + condition.get('temp') + " " + units.get('temperature') + sum
+             ", And the temperature is " + condition.get('temp') + " " + units.get('temperature') 
 
     print("Response:")
     print(speech)
+    print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
     return {
         "speech": speech,
