@@ -112,8 +112,8 @@ def makeWebhookResult(data):
     print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
     return {
-        "speech": speech,
-        "displayText": speech,
+        "speech": sum,
+        "displayText": sum,
         # "data": data,
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
