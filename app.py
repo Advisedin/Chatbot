@@ -98,22 +98,15 @@ def makeWebhookResult(data):
 
     # print(json.dumps(item, indent=4))
 
-    num1 = 1.5
-    num2 = 6.3
-
-    # Add two numbers
-    sum = float(num1) + float(num2)
-
     speech = "Today the weather in " + location.get('city') + ": " + condition.get('text') + \
-             ", And the temperature is " + condition.get('temp') + " " + units.get('temperature') 
+             ", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
     print("Response:")
-    # print(speech)
-    print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+    print(speech)
 
     return {
-        "speech": sum,
-        "displayText": sum,
+        "speech": speech,
+        "displayText": speech,
         # "data": data,
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
