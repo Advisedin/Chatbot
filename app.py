@@ -98,11 +98,11 @@ def makeWebhookResult(data):
 
     # print(json.dumps(item, indent=4))
   # Vahid Test Begin
-    num1 = 1.5
-    num2 = 6.3
-    sum = float(num1) + float(num2)
+    num1 = 1
+    num2 = 6
+    sum = (num1) + (num2)
  # Vahid Test End
-    speech = "Test"
+    speech = str(sum)
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
              #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
@@ -112,7 +112,7 @@ def makeWebhookResult(data):
     print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
     return {
-        sum,
+        
         "speech": speech,
         "displayText": speech,
         # "data": data,
