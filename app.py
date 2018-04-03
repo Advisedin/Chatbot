@@ -101,6 +101,11 @@ def makeWebhookResult(data):
     num1 = 1
     num2 = 6
     sum = (num1) + (num2)
+    # File Read Begin
+    f = open("requirements.txt")
+    print f.read()
+    f.seek(0)
+    # File Read Ends
  # Vahid Test End
     speech = str(sum)
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
