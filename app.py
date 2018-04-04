@@ -102,7 +102,7 @@ def makeWebhookResult(data):
     num2 = 6
     sum = (num1) + (num2)
     # File Read Begin
-    f = open("requirements.txt")
+    f = open('requirements.txt')
     print f.read()
     f.seek(0)
     # File Read Ends
