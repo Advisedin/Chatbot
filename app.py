@@ -105,7 +105,7 @@ def makeWebhookResult(data):
     # File Read Begin
     f = open('text.txt','r')
     lines = f.readlines()
-    sum = len(lines)
+    sum = lines
     f.close()
     
     ###with open('text.txt', 'r') as infile:
@@ -118,7 +118,8 @@ def makeWebhookResult(data):
     
     # File Read Ends
  # Vahid Test End
-    speech = str(sum)
+    ##speech = str(sum)
+    speech = sum
     
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
              #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
