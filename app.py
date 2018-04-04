@@ -107,7 +107,8 @@ def makeWebhookResult(data):
     f.close()
     # File Read Ends
  # Vahid Test End
-    speech = str(sum)
+    #speech = str(sum)
+     speech = lines
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
              #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
