@@ -103,9 +103,14 @@ def makeWebhookResult(data):
     
     #sum = (num1) + (num2)
     # File Read Begin
+    ##f = open('text.txt','r')
+    ##lines = f.readlines()
+    ##sum = len(lines)
+    ##f.close()
+    
     f = open('text.txt','r')
-    lines = f.readlines()
-    sum = lines
+    lines = [line for line inf.readlines()]
+    sum = lines[0]
     f.close()
     
     ###with open('text.txt', 'r') as infile:
