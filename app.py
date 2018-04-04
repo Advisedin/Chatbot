@@ -100,15 +100,16 @@ def makeWebhookResult(data):
   # Vahid Test Begin
     num1 = 1
     num2 = 6
-    sum = (num1) + (num2)
+    
+    #sum = (num1) + (num2)
     # File Read Begin
     f = open('text.txt','r')
-    lines = f.readlines()
+    sum = len(lines)
     f.close()
     # File Read Ends
  # Vahid Test End
-    #speech = str(sum)
-     speech = lines
+    speech = str(sum)
+    
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
              #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
