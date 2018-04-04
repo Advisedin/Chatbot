@@ -108,7 +108,7 @@ def makeWebhookResult(data):
     ##sum = len(lines)
     ##f.close()
     
-    mylist = ["foo","bar","baz",'bar','any','much']
+    mylist = ['bar','any','much']
     if 'bar' in mylist:
         sum = mylist.index('bar')
     else:
