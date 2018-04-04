@@ -110,7 +110,7 @@ def makeWebhookResult(data):
     
     mylist = ['bar','any','much']
     if 'bar' in mylist:
-        sum = mylist.index('bar')
+        sum = num1 + num2
     else:
     sum = 100
     
