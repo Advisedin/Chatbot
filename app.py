@@ -108,10 +108,13 @@ def makeWebhookResult(data):
     ##sum = len(lines)
     ##f.close()
     
-    with open('text.txt', 'r') as infile:
-    data = infile.read()  
-    my_list = data.splitlines()
-    sum = my_list[1]
+    ###with open('text.txt', 'r') as infile:
+    ###data = infile.read()  
+    ###my_list = data.splitlines()
+    ###sum = my_list[1]
+    if 'Latte' in open('text.txt').read():
+    sum =10
+    
     
     # File Read Ends
  # Vahid Test End
