@@ -110,7 +110,8 @@ def makeWebhookResult(data):
     with open('text.txt', 'r+') as f:
     for line in f:
         if line.startswith("Latte"):
-            sum = f.next() 
+            sum =1
+            #f.next() 
             # Or use next(f, '') to return <empty string> instead of raising a  
             # StopIteration if the last line is also a match.
             break
