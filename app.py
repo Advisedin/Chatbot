@@ -103,10 +103,18 @@ def makeWebhookResult(data):
     
     #sum = (num1) + (num2)
     # File Read Begin
-    f = open('text.txt','r')
-    lines = f.readlines()
-    sum = len(lines)
-    f.close()
+    ##f = open('text.txt','r')
+    ##lines = f.readlines()
+    ##sum = len(lines)
+    ##f.close()
+    with open('text.txt', 'r+') as f:
+    for line in f:
+        if line.startswith("Latte"):
+            sum = f.next() 
+            # Or use next(f, '') to return <empty string> instead of raising a  
+            # StopIteration if the last line is also a match.
+            break
+    
     # File Read Ends
  # Vahid Test End
     speech = str(sum)
@@ -120,7 +128,7 @@ def makeWebhookResult(data):
     #file = open(“requirements.txt”, “r”) 
     
     
-    print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+    #print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 
     return {
         
