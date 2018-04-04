@@ -107,14 +107,11 @@ def makeWebhookResult(data):
     ##lines = f.readlines()
     ##sum = len(lines)
     ##f.close()
-    with open('text.txt', 'r+') as f:
-    for line in f:
-        if line.startswith("Latte"):
-            sum =1
-            #f.next() 
-            # Or use next(f, '') to return <empty string> instead of raising a  
-            # StopIteration if the last line is also a match.
-            break
+    
+    with open('text.txt', 'r') as infile:
+    data = infile.read()  
+    my_list = data.splitlines()
+    sum = my_list[1]
     
     # File Read Ends
  # Vahid Test End
