@@ -103,11 +103,16 @@ def makeWebhookResult(data):
     
     #sum = (num1) + (num2)
     # File Read Begin
-    f = open('text.txt','r')
-    lines = f.readlines()
-    sum = len(lines)
-    f.close()
-     
+    ##f = open('text.txt','r')
+    ##lines = f.readlines()
+    ##sum = len(lines)
+    ##f.close()
+    
+    mylist = ["foo","bar","baz",'bar','any','much']
+    if 'bar' in mylist:
+        sum = mylist.index('bar')
+    else:
+    sum = 100
     
 
     
