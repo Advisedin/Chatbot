@@ -110,7 +110,8 @@ def makeWebhookResult(data):
     
     list1 = ['larry', 'curly', 'moe']
     list2 = ['3.50', '4.0', '5.30']
-    sum= list1.index('moe')
+    x= list1.index('moe')
+    sum= list2[x]
     
     
     # File Read Ends
