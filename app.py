@@ -40,8 +40,9 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    res = processRequest(req)
-
+	
+    ##res = processRequest(req)
+	res=makeWebhookResult1()
     res = json.dumps(res, indent=4)
     # print(res)
     r = make_response(res)
@@ -59,7 +60,8 @@ def processRequest(req):
     yql_url = baseurl + urlencode({'q': yql_query}) + "&format=json"
     result = urlopen(yql_url).read()
     data = json.loads(result)
-    res = makeWebhookResult(data)
+    ##res = makeWebhookResult(data)
+	makeWebhookResult()
     return res
 
 
@@ -73,6 +75,73 @@ def makeYqlQuery(req):
     return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')"
 
 
+
+def makeWebhookResult1():
+    query = data.get('query')
+    if query is None:
+        return {}
+
+    result = query.get('results')
+    if result is None:
+        return {}
+
+    channel = result.get('channel')
+    if channel is None:
+        return {}
+
+    item = channel.get('item')
+    location = channel.get('location')
+    units = channel.get('units')
+    if (location is None) or (item is None) or (units is None):
+        return {}
+
+    condition = item.get('condition')
+    if condition is None:
+        return {}
+
+    # print(json.dumps(item, indent=4))
+  # Vahid Test Begin
+    num1 = 1
+    num2 = 6
+    
+    #sum = (num1) + (num2)
+    # File Read Begin
+    ##f = open('text.txt','r')
+    ##lines = f.readlines()
+    ##sum = len(lines)
+    ##f.close()
+    
+    list1 = ['larry', 'curly', 'moe']
+    list2 = ['3.50', '4.0', '5.30']
+    x= list1.index('moe')
+    sum= list2[x]
+    
+    
+    # File Read Ends
+ # Vahid Test End
+    speech = str(sum)
+    ##speech = sum
+    
+    #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
+             #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
+
+    print("Response:")
+    #print(speech)
+    #VM
+    #file = open(“requirements.txt”, “r”) 
+    
+    
+    #print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+
+    return {
+        
+        "speech": speech,
+        "displayText": speech,
+        # "data": data,
+        # "contextOut": [],
+        "source": "apiai-weather-webhook-sample"
+    }
+	
 def makeWebhookResult(data):
     query = data.get('query')
     if query is None:
