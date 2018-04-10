@@ -82,6 +82,9 @@ def makeYqlQuery(req):
     result = req.get("result")
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
+  	global cityy 
+    cityy= parameters.get("geo-city")
+
     if city is None:
         return None
 
@@ -125,7 +128,7 @@ def makeWebhookResult(data):
     
     list1 = ['larry', 'London', 'moe']
     list2 = ['3.50', '100', '5.30']
-    x= list1.index(city)
+    x= list1.index(cityy)
     sum= list2[x]
     
     
