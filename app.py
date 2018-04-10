@@ -42,7 +42,7 @@ def webhook():
 
 	
     ##res = processRequest(req)
-	res=makeWebhookResult1()
+	res=makeWebhookResult1(req)
     res = json.dumps(res, indent=4)
     # print(res)
     r = make_response(res)
@@ -76,7 +76,9 @@ def makeYqlQuery(req):
 
 
 
-def makeWebhookResult1():
+def makeWebhookResult1(req):
+	if req.get("result").get("action") != "yahooWeatherForecast":
+        return {}
     query = data.get('query')
     if query is None:
         return {}
