@@ -123,9 +123,9 @@ def makeWebhookResult(data):
     ##sum = len(lines)
     ##f.close()
     
-    list1 = ['larry', 'curly', 'moe']
-    list2 = ['3.50', '4.0', '5.30']
-    x= list1.index('moe')
+    list1 = ['larry', 'London', 'moe']
+    list2 = ['3.50', '100', '5.30']
+    x= list1.index(city)
     sum= list2[x]
     
     
