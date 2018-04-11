@@ -64,7 +64,8 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") != "yahooWeatherForecast":
+    ##if req.get("result").get("action") != "yahooWeatherForecast":
+    if req.get("result").get("action") != "order.drink":
         return {}
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
     yql_query = makeYqlQuery(req)
@@ -80,11 +81,20 @@ def processRequest(req):
 def makeYqlQuery(req):
     result = req.get("result")
     parameters = result.get("parameters")
-    global tmpcity
-    tmpcity = parameters.get("geo-city")
-    city = parameters.get("geo-city")
-    if city is None:
+    ##global tmpcity
+    ##tmpcity = parameters.get("geo-city")
+    ##city = parameters.get("geo-city")
+    ##if city is None:
+    ##    return None
+    global coffee
+    global coffeesize
+    coffee = parameters.get("drink")
+    coffeesize = parameters.get("size")
+    if coffee is None:
         return None
+    if coffeesize is None:
+        return None
+    
 
     return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')"
 
@@ -124,9 +134,9 @@ def makeWebhookResult(data):
     ##sum = len(lines)
     ##f.close()
     
-    list1 = ['larry', 'London', 'moe']
-    list2 = ['3.50', '100', '5.30']
-    x= list1.index(tmpcity)
+    list1 = ['Latte', 'Longblack', 'Hot chocolate']
+    list2 = ['3.50', '4.0', '5.30']
+    x= list1.index(coffee)
     sum= list2[x]
     
     
