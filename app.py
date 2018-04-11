@@ -28,7 +28,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 from __future__ import print_function
 from future.standard_library import install_aliases
 install_aliases()
@@ -81,11 +80,7 @@ def processRequest(req):
 def makeYqlQuery(req):
     result = req.get("result")
     parameters = result.get("parameters")
-    ##global city
-    city = parameters.get("geo-city")
-    ##global cityy
-    cityy= parameters.get("geo-city")
-
+	city = parameters.get("geo-city")
     if city is None:
         return None
 
@@ -129,13 +124,14 @@ def makeWebhookResult(data):
     
     list1 = ['larry', 'London', 'moe']
     list2 = ['3.50', '100', '5.30']
+    x= list1.index('moe')
     sum= list2[x]
     
     
     # File Read Ends
  # Vahid Test End
     speech = str(sum)
-    ##speech = str(city)
+    ##speech = sum
     
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
              #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
@@ -162,7 +158,5 @@ if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
 
     print("Starting app on port %d" % port)
-
-    app.run(debug=False, port=port, host='0.0.0.0')
 
     app.run(debug=False, port=port, host='0.0.0.0')
