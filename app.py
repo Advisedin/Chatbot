@@ -135,7 +135,7 @@ def makeWebhookResult(data):
     ##sum = len(lines)
     ##f.close()
     
-    list1 = ['Latte', 'Longblack', 'Hot chocolate']
+    list1 = ['Latte', 'tea', 'Hot chocolate']
     list2 = ['3.50', '4.0', '5.30']
     x= list1.index(coffee)
     sum= list2[x]
