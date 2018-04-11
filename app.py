@@ -81,7 +81,7 @@ def processRequest(req):
 def makeYqlQuery(req):
     result = req.get("result")
     parameters = result.get("parameters")
-    global city
+    ##global city
     city = parameters.get("geo-city")
     global cityy
     cityy= parameters.get("geo-city")
