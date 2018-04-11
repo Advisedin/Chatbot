@@ -88,7 +88,6 @@ def makeYqlQuery(req):
     ##    return None
     city = "London"
     global coffee
-    global coffeesize
     coffee = parameters.get("drink")
     if coffee is None:
         return None
