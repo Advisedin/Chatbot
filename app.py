@@ -90,11 +90,9 @@ def makeYqlQuery(req):
     global coffee
     global coffeesize
     coffee = parameters.get("drink")
-    coffeesize = parameters.get("size")
     if coffee is None:
         return None
-    if coffeesize is None:
-        return None
+  
     
 
     return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')"
