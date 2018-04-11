@@ -81,6 +81,7 @@ def processRequest(req):
 def makeYqlQuery(req):
     result = req.get("result")
     parameters = result.get("parameters")
+    global city
     city = parameters.get("geo-city")
     global cityy
     cityy= parameters.get("geo-city")
@@ -134,7 +135,7 @@ def makeWebhookResult(data):
     # File Read Ends
  # Vahid Test End
     ##speech = str(sum)
-    speech = str(cityy)
+    speech = str(city)
     
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
              #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
