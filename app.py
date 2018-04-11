@@ -126,14 +126,14 @@ def makeWebhookResult(data):
     
     list1 = ['larry', 'London', 'moe']
     list2 = ['3.50', '100', '5.30']
-    x= list1.index('moe')
+    x= list1.index(tmpcity)
     sum= list2[x]
     
     
     # File Read Ends
  # Vahid Test End
-    ##speech = str(sum)
-    speech = tmpcity
+    speech = str(sum)
+    ##speech = tmpcity
     
     #"Today the weather in " + location.get('city') + ": " + condition.get('text') + \
              #", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
