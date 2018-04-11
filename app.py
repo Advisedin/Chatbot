@@ -86,6 +86,7 @@ def makeYqlQuery(req):
     ##city = parameters.get("geo-city")
     ##if city is None:
     ##    return None
+    city = "London"
     global coffee
     global coffeesize
     coffee = parameters.get("drink")
